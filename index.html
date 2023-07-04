@@ -217,7 +217,14 @@
       <input type="text" class="theme-input" placeholder="Last Name" name="last_name" id="last_name" required>
     </div>
     <div class="theme-form__row --phone-row">
-      
+      <div class="country-list">
+        <input type="hidden" class="country-list__input" name="phone_country" id="phone_country" value="">
+        <div class="country-list__value" data-country="uk">+44</div>
+        <div class="country-list__box">
+          <button class="country-box__item --active-item" data-country="uk">+44</button>
+          <button class="country-box__item" data-country="ru">+7</button>
+        </div>
+      </div>
       <input type="tel" class="theme-input" placeholder="Phone Number" name="phone" id="phone" required>
     </div>
     <input type="text" class="theme-input" placeholder="Company Name (optional)" name="company_name" id="company_name">
