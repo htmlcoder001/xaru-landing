@@ -493,72 +493,14 @@ footer {
 }
 
 /* Else */
-.country-list {
-  width: 115px;
-  flex: 1 0 115px;
-  height: 60px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-  border: 1px solid #ECECEC;
-  cursor: pointer;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 20px;
-}
-.country-list__value {
-  position: relative;
-  
-  color: #8A8A8A;
-  font-size: 16px;
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent;
   font-family: var(--theme-font);
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.country-list__value:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 36px;
-  height: 22px;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: -42px;
-}
-[data-country="uk"]:before {
-  background-image: url(img/icons/flag-uk.png);
-}
-[data-country="ru"]:before {
-  background-image: url(img/icons/flag-ru.png);
-}
-.country-list__box {
-  position: absolute;
-  opacity: 0;
-}
-.country-box__item {
   color: #8A8A8A;
-  font-size: 16px;
-  font-family: var(--theme-font);
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  font-size: 16px;
+  padding-left: 16px;
 }
-.country-box__item:hover {
-
-}
-.--active-item {
-  pointer-events: none;
+.iti__arrow {
+  display: none;
 }

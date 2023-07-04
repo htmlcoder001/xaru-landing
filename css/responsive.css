@@ -255,6 +255,9 @@
   .theme-form__row {
     flex-direction: column;
   }
+  .--phone-row {
+    flex-direction: row;
+  }
   .theme-checkbox__text {
     font-size: 14px;
   }
@@ -268,6 +271,13 @@
   .theme-modal:after {
     right: -500px;
     top: calc(50% + 350px);
+  }
+  .theme-input {
+    height: 50px;
+    font-size: 14px;
+  }
+  .iti--separate-dial-code .iti__selected-flag {
+    font-size: 14px;
   }
 }
 
