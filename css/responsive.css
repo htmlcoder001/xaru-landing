@@ -46,6 +46,10 @@
   .intro-wrapper {
     padding-top: 64px;
   }
+  .theme-modal:after {
+    right: -500px;
+    top: calc(50% + 250px);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -147,6 +151,9 @@
   .about-wrapper__item:nth-child(1) .about-item__image {
     max-width: 400px;
   }
+  .theme-modal__title {
+    font-size: 48px;
+  }
 }
 
 /* Phone */
@@ -241,6 +248,26 @@
   }
   .about-wrapper__item:nth-child(4) .about-item__image.--about-image-mobile {
     bottom: -150px;
+  }
+  .theme-modal__title {
+    font-size: 36px;
+  }
+  .theme-form__row {
+    flex-direction: column;
+  }
+  .theme-checkbox__text {
+    font-size: 14px;
+  }
+  .theme-modal {
+    padding: 32px;
+  }
+  .theme-modal__close {
+    top: 32px;
+    right: 32px;
+  }
+  .theme-modal:after {
+    right: -500px;
+    top: calc(50% + 350px);
   }
 }
 
