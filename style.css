@@ -39,7 +39,8 @@ header {
   min-width: 150px;
   padding: 0;
 }
-.header-wrapper__button .theme-button__text {
+.header-wrapper__button .theme-button__text,
+.header-wrapper__button:focus .theme-button__text {
   font-family: var(--theme-font);
 }
 
@@ -147,6 +148,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   height: 642px;
+  overflow: hidden;
 }
 .--item-big {
   grid-column: span 2;
@@ -212,6 +214,9 @@ header {
 .about-wrapper__item:nth-child(4) .about-item__image {
   left: 160px;
   bottom: 0;
+}
+.--about-image-mobile {
+  display: none;
 }
 
 /* Benefits */
