@@ -1,0 +1,39 @@
+/* Laptop */
+@media (max-width: 1240px) {
+
+}
+@media (max-width: 1140px) {
+
+}
+
+@media (max-width: 1024px) {
+
+
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+/* Phone */
+@media (max-width: 575px) {
+
+}
+
+/* Phone - 320px */
+@media (max-width: 374px) {
+
+}
+
+
+@media (max-height: 800px) {
+  .theme-modal {
+    overflow-y: scroll;
+    max-height: 100%;
+  }
+}
