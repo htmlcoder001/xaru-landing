@@ -86,5 +86,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* Functions init */
+  function format(item) {
+    if (!item.id) {
+      return item.text;
+    }
+    var countryUrl = "https://hatscripts.github.io/circle-flags/flags/";
+
+    var img = $("<img>", {
+      class: "img-flag",
+      width: 26,
+      src: countryUrl + item.element.value.toLowerCase() + ".svg"
+    });
+    var span = $("<span>", {
+      text: " " + item.text
+    });
+    span.prepend(img);
+    return span;
+  }
+
+
+  (() => {
+    $("#country").select2({
+      templateResult: function(item) {
+        return format(item, false);
+      }
+    });
+
+
+    window.intlTelInput(document.querySelector("#phone"), {
+      utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+      autoPlaceholder: "aggressive",
+      separateDialCode: true,
+      formatOnDisplay: true,
+    });
+  })();
+
+
 
 });

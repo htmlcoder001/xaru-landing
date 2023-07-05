@@ -516,3 +516,75 @@ footer {
 .iti__arrow {
   display: none;
 }
+.iti__flag-box, .iti__country-name {
+  font-family: var(--theme-font);
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+}
+.iti__dial-code,
+.select2-results__option {
+  font-family: var(--theme-font);
+  font-weight: 400;
+}
+
+.select2-container {
+  height: 60px;
+  max-width: 674px;
+}
+.select2-container .select2-selection {
+  background: #ffffff;
+  height: 60px;
+  max-width: 674px;
+  width: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--theme-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #8A8A8A;
+  border: 1px solid #ECECEC;
+  outline: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 16px;
+  right: 24px;
+}
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  border-radius: 35px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  border-radius: 35px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.select2-results__option img {
+  margin-right: 4px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-left: 0;
+}
