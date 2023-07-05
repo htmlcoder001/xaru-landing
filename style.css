@@ -581,6 +581,9 @@ footer {
   font-family: var(--theme-font);
   font-weight: 400;
 }
+.select2-results__option:first-child img {
+  display: none;
+}
 
 .select2-container {
   height: 60px;
