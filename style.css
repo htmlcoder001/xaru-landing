@@ -495,6 +495,60 @@ footer {
 }
 
 /* Else */
+.form-notification {
+  padding: 32px;
+  width: 350px;
+  
+  
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  opacity: 0;
+  pointer-events: none;
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  overflow: hidden;
+  z-index: 1001;
+}
+.form-notification__text {
+  color: #3E5063;
+  font-size: 24px;
+  font-family: var(--theme-font);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 30px;
+  
+  display: none;
+}
+.--form-sent .--form-text-success {
+  display: block;
+}
+.--form-error .--form-text-error {
+  display: block;
+}
+.--form-sent .form-notification,
+.--form-error .form-notification {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .iti--separate-dial-code .iti__selected-flag {
   background-color: transparent;
   font-family: var(--theme-font);

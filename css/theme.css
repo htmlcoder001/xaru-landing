@@ -231,6 +231,8 @@ body {
   z-index: 1001;
 }
 .--modal-show.theme-overlay,
+.--form-sent .theme-overlay,
+.--form-error .theme-overlay,
 .--modal-show.theme-modal {
   opacity: 1;
   pointer-events: all;

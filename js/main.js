@@ -118,8 +118,32 @@ document.addEventListener("DOMContentLoaded", () => {
       autoPlaceholder: "aggressive",
       separateDialCode: true,
       formatOnDisplay: true,
+      hiddenInput: "full_phone",
     });
   })();
+
+  $('#form_join').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'post',
+      url: 'https://api.exchange.xaru.io/api/v1/auth/sign-up/form',
+      data: $('#form_join').serialize(),
+      success: function () {
+        closeModals();
+        $('body').addClass('--form-sent');
+        setTimeout(() => {
+          $('body').removeClass('--form-sent');
+        }, 2500);
+      },
+      error: function () {
+        closeModals();
+        $('body').addClass('--form-error');
+        setTimeout(() => {
+          $('body').removeClass('--form-error');
+        }, 2500);
+      }
+    });
+  });
 
 
 

@@ -213,13 +213,14 @@
   </button>
   
   <span class="theme-modal__title">Start using <br/>XARU Exchange</span>
-  <form action="" method="post" class="theme-modal__form">
+  <form action="" method="post" class="theme-modal__form" id="form_join">
     <div class="theme-form__row">
-      <input type="text" class="theme-input" placeholder="First Name" name="first_name" id="first_name" required pattern="[A-Za-z]{1,32}">
-      <input type="text" class="theme-input" placeholder="Last Name" name="last_name" id="last_name" required pattern="[A-Za-z]{1,32}">
+      <input type="text" class="theme-input" placeholder="First Name" name="firstName" id="first_name" required pattern="[A-Za-z]{1,32}">
+      <input type="text" class="theme-input" placeholder="Last Name" name="lastName" id="last_name" required pattern="[A-Za-z]{1,32}">
     </div>
     <input type="tel" class="theme-input" placeholder="Phone Number" name="phone" id="phone" required pattern="\d*">
-    <input type="text" class="theme-input" placeholder="Company Name (optional)" name="company_name" id="company_name">
+    <input type="hidden" name="full_phone" id="full_phone">
+    <input type="text" class="theme-input" placeholder="Company Name (optional)" name="company" id="company_name">
     <input type="email" class="theme-input" placeholder="Email" name="email" id="email" required>
 <!--    <input type="text" class="theme-input" placeholder="Country" name="country" id="country" required>-->
     <select class="form-control theme-input" id="country" name="country" required>
@@ -457,7 +458,7 @@
       <option value="ZW" data-capital="Harare">Zimbabwe</option>
     </select>
     <label class="theme-form__checkbox">
-      <input type="checkbox" class="theme-checkbox__input" name="" id="" required>
+      <input type="checkbox" class="theme-checkbox__input" name="termsAccepted" id="termsAccepted" required>
       <span class="theme-checkbox__text">I consent to have Xaru my submitted information so they can respond to my inquiry. By sending the request, you agree to our <a href="/terms-and-conditions">Terms and Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>.</span>
     </label>
     <button class="theme-button theme-form__submit">
@@ -472,10 +473,15 @@
   <img src="img/intro-image.png" alt="" class="theme-modal__image">
 </div>
 
+<div class="form-notification">
+  <p class="form-notification__text --form-text-success">Form has been sent successfully!</p>
+  <p class="form-notification__text --form-text-error">Something wrong!</p>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
-<script type='text/javascript' src='js/main.js'></script>
+<script type='text/javascript' src='js/main.js?v=1.0.5'></script>
 <script>
 
 
