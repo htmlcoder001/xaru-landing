@@ -125,29 +125,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  $('#form_join').on('submit', function (e) {
-    e.preventDefault();
-    $.ajax({
-      type: 'post',
-      url: 'https://api.exchange.xaru.io/api/v1/auth/sign-up/form',
-      data: $('#form_join').serialize(),
-      success: function () {
-        closeModals();
-        $('#form_join').reset();
-        $('body').addClass('--form-sent');
-        setTimeout(() => {
-          $('body').removeClass('--form-sent');
-        }, 2500);
-      },
-      error: function () {
-        closeModals();
-        $('body').addClass('--form-error');
-        setTimeout(() => {
-          $('body').removeClass('--form-error');
-        }, 2500);
-      }
+
+
+  (() => {
+    let formJoin = document.getElementById('form_join');
+    let formData = new FormData(formJoin);
+
+    formJoin.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+
+      fetch('https://api.exchange.xaru.io/api/v1/auth/sign-up/form',
+        {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          method: "POST",
+          body: JSON.stringify(formData)
+        })
+        .then(function(response) {
+          console.log(response);
+          console.log(response.body);
+          console.log(response.message);
+          console.log(response.errors);
+          console.log(response.json());
+          if (response.status >= 400) {
+            throw new Error("Bad response from server");
+          }
+          return response.json();
+        })
+        .then(function(data) {
+          closeModals();
+          formJoin.reset();
+          document.body.classList.add('--form-sent');
+          setTimeout(() => {
+            document.body.classList.remove('--form-sent');
+          }, 2500);
+        })
+        .catch(function(err) {
+          closeModals();
+          formJoin.reset();
+          document.body.classList.add('--form-error');
+          setTimeout(() => {
+            document.body.classList.remove('--form-error');
+          }, 2500);
+      });
     });
-  });
+
+
+
+  })();
+
 
 
 
