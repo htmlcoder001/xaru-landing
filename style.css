@@ -9,7 +9,7 @@ header {
   justify-content: space-between;
 }
 .header-wrapper__logo {
-  max-width: 163px;
+  max-width: 200px;
 }
 .header-wrapper__nav {
   display: flex;
@@ -404,7 +404,7 @@ footer {
 
 }
 .footer-info__logo {
-  max-width: 163px;
+  max-width: 200px;
   margin-bottom: 12px;
 }
 .footer-info__item {
