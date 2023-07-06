@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* Functions init */
-  function format(item) {
+  /*function format(item) {
     if (!item.id) {
       return item.text;
     }
@@ -102,20 +102,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     span.prepend(img);
     return span;
-  }
+  }*/
 
 
   (() => {
-    $("#country").select2({
+    /*$("#country").select2({
       templateResult: function(item) {
         return format(item, false);
       }
+    });*/
+    $("#country").select2({
+
     });
 
 
     window.intlTelInput(document.querySelector("#phone"), {
       utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-      autoPlaceholder: "aggressive",
+      // autoPlaceholder: "aggressive",
       separateDialCode: true,
       formatOnDisplay: true,
       hiddenInput: "full_phone",
@@ -130,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
       data: $('#form_join').serialize(),
       success: function () {
         closeModals();
+        $('#form_join').reset();
         $('body').addClass('--form-sent');
         setTimeout(() => {
           $('body').removeClass('--form-sent');
